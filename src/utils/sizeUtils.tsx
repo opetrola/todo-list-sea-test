@@ -14,3 +14,16 @@ export const handleSizes = (size: TSizes): number => {
       return 30
   }
 }
+
+type TReturnButtonSize = 'sm' | 'md'
+
+export const ButtonSize = (
+  size: TButtonSize | undefined,
+): TReturnButtonSize => {
+  switch (size) {
+    case 'sm':
+      return 'sm'
+    default:
+      return 'md'
+  }
+}

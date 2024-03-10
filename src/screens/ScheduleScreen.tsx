@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
 const ScheduleScreen = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('navigation')
 
   return (
     <View style={styles.container}>

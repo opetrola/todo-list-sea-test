@@ -1,17 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
-const SettingsScreen = () => {
+const AuthScreen = () => {
   const { t } = useTranslation('navigation')
 
   return (
-    <View style={styles.container}>
-      <Text>{t('settings')}</Text>
+    <View style={style.container}>
+      <Text>{t('auth')}</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default SettingsScreen
+export default AuthScreen

@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
-const HomeScreen = () => {
-  const { t } = useTranslation('common')
+const TodosScreens = () => {
+  const { t } = useTranslation('navigation')
 
   return (
     <View style={style.container}>
-      <Text>{t('home')}</Text>
+      <Text>{t('todos')}</Text>
     </View>
   )
 }
@@ -19,4 +19,4 @@ const style = StyleSheet.create({
   },
 })
 
-export default HomeScreen
+export default TodosScreens

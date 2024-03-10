@@ -43,6 +43,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-TodoListTestSEA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodoListTestSEA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TodoListTestSEA/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-TodoListTestSEA-TodoListTestSEATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListTestSEA-TodoListTestSEATests.release.xcconfig"; path = "Target Support Files/Pods-TodoListTestSEA-TodoListTestSEATests/Pods-TodoListTestSEA-TodoListTestSEATests.release.xcconfig"; sourceTree = "<group>"; };
+		DB0669A62B9B408F00E7D5EF /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		DB0669A92B9B408F00E7D5EF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		DB0669AC2B9B408F00E7D5EF /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +89,7 @@
 		13B07FAE1A68108700A75B9A /* TodoListTestSEA */ = {
 			isa = PBXGroup;
 			children = (
+				DB0669A42B9B408400E7D5EF /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -146,6 +150,16 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-TodoListTestSEA-TodoListTestSEATests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB0669A42B9B408400E7D5EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DB0669A62B9B408F00E7D5EF /* FontAwesome.ttf */,
+				DB0669AC2B9B408F00E7D5EF /* Ionicons.ttf */,
+				DB0669A92B9B408F00E7D5EF /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

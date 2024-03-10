@@ -3,10 +3,9 @@
  */
 
 import 'react-native'
-import React from 'react'
 
 import { it, describe } from '@jest/globals'
-import { render, screen, fireEvent } from '@testing-library/react-native'
+import { render } from '@testing-library/react-native'
 import MoleculeButton from '@molecules/MoleculeButton.tsx'
 
 describe('Atom button', () => {

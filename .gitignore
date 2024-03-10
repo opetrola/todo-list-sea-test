@@ -39,6 +39,7 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn.lock
 
 # fastlane
 #
@@ -63,4 +64,4 @@ yarn-error.log
 .metro-health-check*
 
 # testing
-/coverage
+/__coverage__

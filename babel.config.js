@@ -4,10 +4,19 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./src'],
-        extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+        root: ['.'],
+        extensions: [
+          '.ios.js',
+          '.android.js',
+          '.js',
+          '.ts',
+          '.tsx',
+          '.json',
+          '.test.tsx',
+        ],
         alias: {
-          tests: ['./__tests__/'],
+          tests: ['./__tests__'],
+          '@src': './src',
           '@atoms': './src/components/atoms',
           '@molecules': './src/components/molecules',
           '@organisms': './src/components/organisms',
@@ -16,6 +25,8 @@ module.exports = {
           '@assets': './assets',
           '@contexts': './src/contexts',
           '@utils': './src/utils',
+          '@navigation': './src/navigation',
+          '@firebase': './src/firebase',
         },
       },
     ],

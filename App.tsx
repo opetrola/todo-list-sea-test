@@ -1,14 +1,14 @@
 import React from 'react'
+import { ContextProvider } from '@contexts/index.tsx'
+import { TodoListTheme } from '@src/theme.tsx'
 
-// Navigation
+// navigation
 import { NavigationContainer } from '@react-navigation/native'
-import { ContextProvider } from 'contexts'
-
-// Enums
-import { TodoListTheme } from 'theme.tsx'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import HomeNavigation from 'Navigation/HomeNavigation.tsx'
-import AuthNavigation from 'Navigation/AuthNavigation.tsx'
+
+// Screens
+import HomeNavigation from '@navigation/HomeNavigation.tsx'
+import AuthNavigation from '@navigation/AuthNavigation.tsx'
 
 const Stack = createNativeStackNavigator()
 

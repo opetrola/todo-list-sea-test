@@ -1,9 +1,9 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useTranslation } from 'react-i18next'
 
 // Screens
-import AuthScreen from 'screens/AuthScreen.tsx'
-import { useTranslation } from 'react-i18next'
+import AuthScreen from '@screens/AuthScreen.tsx'
 
 const Stack = createNativeStackNavigator()
 const AuthNavigation = () => {
@@ -14,7 +14,7 @@ const AuthNavigation = () => {
       <Stack.Screen
         name={'AuthForm'}
         component={AuthScreen}
-        options={{ title: t('auth') }}
+        options={{ title: t('auth'), header: () => null }}
       />
     </Stack.Navigator>
   )

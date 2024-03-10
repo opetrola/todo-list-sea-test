@@ -9,6 +9,9 @@
       "*": [
         "src/*"
       ],
+      "@src/*": [
+        "src/*"
+      ],
       "@atoms/*": [
         "src/components/atoms/*"
       ],
@@ -32,6 +35,15 @@
       ],
       "@assets/*": [
         "assets/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@firebase/*": [
+        "src/firebase/*"
+      ],
+      "@localization/*": [
+        "src/localization/*"
       ]
     },
     "include": [

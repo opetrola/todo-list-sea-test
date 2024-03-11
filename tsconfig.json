@@ -36,6 +36,9 @@
       "@assets/*": [
         "assets/*"
       ],
+      "@images/*": [
+        "assets/images/*"
+      ],
       "@navigation/*": [
         "src/navigation/*"
       ],

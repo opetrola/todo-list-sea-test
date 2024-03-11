@@ -1,21 +1,23 @@
-export const handleSizes = (size: TSizes): number => {
+export const handleSizes = (size: TSizes | undefined): number => {
   switch (size) {
     case 'ssm':
-      return 12
-    case 'sm':
-      return 14
-    case 'md':
       return 18
-    case 'lg':
+    case 'sm':
       return 22
-    case 'xlg':
+    case 'md':
       return 26
-    case 'xxlg':
+    case 'lg':
       return 30
+    case 'xlg':
+      return 40
+    case 'xxlg':
+      return 46
+    default:
+      return 18
   }
 }
 
-type TReturnButtonSize = 'sm' | 'md'
+type TReturnButtonSize = 'sm' | 'md' | 'lg'
 
 export const ButtonSize = (
   size: TButtonSize | undefined,
@@ -23,7 +25,9 @@ export const ButtonSize = (
   switch (size) {
     case 'sm':
       return 'sm'
-    default:
+    case 'md':
       return 'md'
+    default:
+      return 'lg'
   }
 }

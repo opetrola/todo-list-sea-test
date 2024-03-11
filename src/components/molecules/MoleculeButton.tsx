@@ -99,7 +99,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 4,
-    marginVertical: 6,
+    marginVertical: 4,
   },
 })
 

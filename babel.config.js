@@ -23,6 +23,7 @@ module.exports = {
           '@screens': './src/screens',
           '@templates': './src/templates',
           '@assets': './assets',
+          '@images': './assets/images',
           '@contexts': './src/contexts',
           '@utils': './src/utils',
           '@navigation': './src/navigation',

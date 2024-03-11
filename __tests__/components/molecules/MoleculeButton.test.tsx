@@ -5,24 +5,41 @@
 import 'react-native'
 
 import { it, describe } from '@jest/globals'
-import { render } from '@testing-library/react-native'
+import { fireEvent, render } from '@testing-library/react-native'
 import MoleculeButton from '@molecules/MoleculeButton.tsx'
 
-describe('Atom button', () => {
-  // Render button with correct values
-  it('Render button with correct values', () => {
-    const textButton = 'Test Button'
+describe('AtomButton', () => {
+  const textButton = 'Test Button'
 
-    const { getByText } = render(
+  it('render button with correct values.', () => {
+    const { getByTestId, getByText } = render(
       <MoleculeButton
         text={textButton}
+        size={'md'}
         action={() => {
           console.log('Clicked..')
         }}
-        size={'md'}
       />,
     )
 
-    getByText(textButton)
+    expect(getByTestId('moleculeButton')).toBeTruthy()
+    expect(getByText(textButton).props.children).toEqual(textButton)
+  })
+
+  it('button when active is clickable.', () => {
+    const { getByTestId } = render(
+      <MoleculeButton
+        text={textButton}
+        size={'md'}
+        action={() => {
+          console.log('Clicked..')
+        }}
+      />,
+    )
+
+    const byId = getByTestId('moleculeButton')
+
+    expect(byId.props.accessibilityState.disabled).not.toBeTruthy()
+    fireEvent.press(byId)
   })
 })

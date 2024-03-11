@@ -1,5 +1,5 @@
 {
-  "name": "TodoListTestSEA",
+  "name": "TodoListTestSea",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,9 @@
     "ios": "react-native run-ios --simulator='iPhone 15 Pro (16.0)'",
     "lint": "eslint .",
     "start": "react-native start --reset-cache",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "log-ios": "react-native log-ios",
+    "log-android": "react-native log-android"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.16",

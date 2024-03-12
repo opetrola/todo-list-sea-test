@@ -1,5 +1,10 @@
-import { LoginProvider } from '@contexts/LoginContext.tsx'
+import { SignInProvider } from '@contexts/SignInContext.tsx'
+import { SignUpProvider } from '@contexts/SignUpContext.tsx'
 
 export const ContextProvider = ({ children }: IFatherProvider) => {
-  return <LoginProvider>{children}</LoginProvider>
+  return (
+    <SignInProvider>
+      <SignUpProvider>{children}</SignUpProvider>
+    </SignInProvider>
+  )
 }

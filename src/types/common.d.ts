@@ -5,3 +5,10 @@ declare interface IFatherProvider {
 declare interface TTabBarIconProps {
   focused: boolean
 }
+
+declare interface INavigationScreen {
+  navigation: any
+}
+declare interface InavigateContainer {
+  navigate: any
+}

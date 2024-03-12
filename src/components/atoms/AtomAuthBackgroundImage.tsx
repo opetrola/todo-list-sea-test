@@ -1,6 +1,6 @@
-import SvgUri from 'react-native-svg-uri'
 import { Dimensions, StyleSheet, View } from 'react-native'
 import { useTheme } from '@react-navigation/native'
+import SvgUri from 'react-native-svg-uri'
 
 const AtomAuthBackgroundImage = () => {
   const { colors } = useTheme()

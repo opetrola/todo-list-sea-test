@@ -5,7 +5,7 @@ import { useTheme } from '@react-navigation/native'
 interface IAtomLabel {
   text: string
   size?: TSizes | undefined
-  weight?: 'normal' | 'bold' | '100' | '400' | '600'
+  weight?: 'normal' | 'bold' | '100' | '200' | '400' | '600'
   color?: TColors | undefined | string
   uppercase?: boolean
   customStyle?: TextStyle

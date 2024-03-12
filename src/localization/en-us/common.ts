@@ -1,1 +1,4 @@
-export default {}
+export default {
+  confirm: 'Confirm',
+  cancel: 'Cancel',
+}

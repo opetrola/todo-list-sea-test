@@ -23,18 +23,20 @@ describe('AtomLabel', () => {
   it('size isn`t defined, render md', () => {
     const { getByTestId } = render(<AtomLabel text={labelText} />)
     expect(getByTestId('atomLabel').props.size).not.toBeTruthy()
-    expect(getByTestId('atomLabel').props.style.fontSize).toEqual(18)
+    expect(getByTestId('atomLabel').props.style[1].fontSize).toEqual(18)
   })
 
   it('should be uppercase if declared upper', () => {
     const { getByTestId } = render(<AtomLabel text={labelText} uppercase />)
-    expect(getByTestId('atomLabel').props.style.textTransform).toEqual(
+    expect(getByTestId('atomLabel').props.style[1].textTransform).toEqual(
       'uppercase',
     )
   })
 
   it('should not be uppercase if isn`t declared upper', () => {
     const { getByTestId } = render(<AtomLabel text={labelText} />)
-    expect(getByTestId('atomLabel').props.style.textTransform).toEqual('none')
+    expect(getByTestId('atomLabel').props.style[1].textTransform).toEqual(
+      'none',
+    )
   })
 })

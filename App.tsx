@@ -16,7 +16,7 @@ function App(): React.JSX.Element {
   return (
     <ContextProvider>
       <NavigationContainer theme={TodoListTheme}>
-        <Stack.Navigator screenOptions={{ header: () => null }}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name={'Auth'} component={AuthNavigation} />
           <Stack.Screen name={'Home'} component={HomeNavigation} />
         </Stack.Navigator>

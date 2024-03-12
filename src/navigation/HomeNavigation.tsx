@@ -5,17 +5,17 @@ import { useTheme } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 // Screens
-import TodosScreens from '@screens/TodosScreens.tsx'
-import ScheduleScreen from '@screens/ScheduleScreen.tsx'
-import SettingsScreen from '@screens/SettingsScreen.tsx'
-import ProfileScreen from '@screens/ProfileScreen.tsx'
+import TodosScreens from '@screens/home/TodosScreens.tsx'
+import ScheduleScreen from '@screens/home/ScheduleScreen.tsx'
+import SettingsScreen from '@screens/home/SettingsScreen.tsx'
+import ProfileScreen from '@screens/home/ProfileScreen.tsx'
 
 const Tab = createBottomTabNavigator()
 
 const tabOptions = (title: string, iconName: string, color: string) => {
   return {
     title,
-    header: () => null,
+    headerShown: false,
     tabBarIcon: ({ focused }: TTabBarIconProps) => (
       <Icons name={iconName} size={30} color={focused ? color : 'grey'} />
     ),
@@ -31,11 +31,6 @@ const HomeNavigation = () => {
       paddingTop: 8,
       height: 90,
     },
-    tabBarLabelStyle: {
-      fontSize: 12,
-    },
-    tabBarActiveTintColor: colors.primary,
-    tabBarInactiveTintColor: 'grey',
   }
 
   return (
@@ -45,6 +40,7 @@ const HomeNavigation = () => {
         component={TodosScreens}
         options={() => tabOptions(t('todos'), 'checklist', colors.primary)}
       />
+
       <Tab.Screen
         name={'Schedule'}
         component={ScheduleScreen}
@@ -52,11 +48,13 @@ const HomeNavigation = () => {
           tabOptions(t('schedule'), 'calendar-month', colors.primary)
         }
       />
+
       <Tab.Screen
         name={'Settings'}
         component={SettingsScreen}
         options={() => tabOptions(t('settings'), 'settings', colors.primary)}
       />
+
       <Tab.Screen
         name={'Profile'}
         component={ProfileScreen}

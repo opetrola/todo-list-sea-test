@@ -27,7 +27,7 @@ module.exports = {
           '@contexts': './src/contexts',
           '@utils': './src/utils',
           '@navigation': './src/navigation',
-          '@firebase': './src/firebase',
+          '@firebase_service': './src/firebase',
         },
       },
     ],

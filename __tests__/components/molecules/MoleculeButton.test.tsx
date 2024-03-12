@@ -8,7 +8,7 @@ import { it, describe } from '@jest/globals'
 import { fireEvent, render } from '@testing-library/react-native'
 import MoleculeButton from '@molecules/MoleculeButton.tsx'
 
-describe('AtomButton', () => {
+describe('MoleculeButton', () => {
   const textButton = 'Test Button'
 
   it('render button with correct values.', () => {

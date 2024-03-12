@@ -1,9 +1,10 @@
-import AtomLabel from '@atoms/AtomLabel.tsx'
-import MoleculeButton from '@molecules/MoleculeButton.tsx'
 import { Dimensions, StyleSheet, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
-const OrganismAuthBlock = () => {
+import AtomLabel from '@atoms/AtomLabel.tsx'
+import MoleculeButton from '@molecules/MoleculeButton.tsx'
+
+const OrganismAuthContainer = ({ navigate }: InavigateContainer) => {
   const { t } = useTranslation('auth')
 
   return (
@@ -25,19 +26,15 @@ const OrganismAuthBlock = () => {
         <MoleculeButton
           text={t('sign_in')}
           variation="solid"
-          size="sm"
-          action={() => {
-            console.log('test')
-          }}
+          size="md"
+          action={() => navigate('EmailSignInForm')}
         />
 
         <MoleculeButton
           text={t('sign_up')}
           variation="bordered"
-          size="sm"
-          action={() => {
-            console.log('test')
-          }}
+          size="md"
+          action={() => navigate('SignUpForm')}
         />
       </View>
     </View>
@@ -61,4 +58,4 @@ const style = StyleSheet.create({
   },
 })
 
-export default OrganismAuthBlock
+export default OrganismAuthContainer

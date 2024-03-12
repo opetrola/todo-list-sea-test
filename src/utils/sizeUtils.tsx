@@ -1,9 +1,9 @@
 export const handleSizes = (size: TSizes | undefined): number => {
   switch (size) {
     case 'ssm':
-      return 18
+      return 16
     case 'sm':
-      return 22
+      return 18
     case 'md':
       return 26
     case 'lg':

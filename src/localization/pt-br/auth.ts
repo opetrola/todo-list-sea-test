@@ -1,8 +1,21 @@
 export default {
-  sign_in: 'Entrar',
+  sign_in: 'Entrar com email',
   sign_up: 'Criar Conta',
   auth_page_title: 'Olá!',
   auth_page_text:
     'Bem vindo ao todo list! Onde você consegue organizar suas tarefas diárias',
   sign_up_using: 'ou entre usando',
+  username: 'Nome de usuário',
+  password: 'Senha',
+  repeat_password: 'Repita sua senha',
+  email: 'Email',
+  put_your_username: 'insira seu nome de usuário aqui...',
+  put_your_email: 'insira seu email aqui...',
+  put_your_password: 'sua senha vem aqui...',
+  repeat_your_password: 'repita sua senha por favor...',
+  already_have_account: 'Já tem uma conta?',
+  cant_have_account: 'Ainda não tem uma conta?',
+  return_to_login: 'Voltar à tela de login.',
+  wrong_credentials_message: 'Email e(ou) senha errados',
+  wrong_credentials_title: 'credenciais inválidas',
 }

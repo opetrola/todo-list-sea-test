@@ -42,7 +42,7 @@
       "@navigation/*": [
         "src/navigation/*"
       ],
-      "@firebase/*": [
+      "@firebase_service/*": [
         "src/firebase/*"
       ],
       "@localization/*": [

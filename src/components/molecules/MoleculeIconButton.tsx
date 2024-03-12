@@ -11,7 +11,8 @@ interface IAtomIconButton {
   onPress?: ((event: GestureResponderEvent) => void) | undefined
   name: string
   size?: TSizes
-  color?: TColors | undefined
+  color?: TColors | undefined | string
+  disabled?: boolean
 }
 
 const MoleculeIconButton = ({
@@ -19,13 +20,16 @@ const MoleculeIconButton = ({
   name,
   color,
   size = 'lg',
+  disabled = false,
 }: IAtomIconButton) => {
   const { colors } = useTheme()
-
-  const handleColor = colors[color ?? 'text']
+  const handleColor = color ?? colors.primary
 
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity
+      disabled={disabled}
+      testID="moleculeIconButton"
+      onPress={onPress}>
       <Icon
         color={handleColor}
         style={style.iconStyle}

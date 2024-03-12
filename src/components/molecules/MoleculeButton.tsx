@@ -19,14 +19,13 @@ const MoleculeButton = ({
   action,
   size,
   variation,
-  disabled = false,
   color,
-  rounded = false,
   customStyle,
+  disabled = false,
+  rounded = false,
 }: IMoleculeButton) => {
   const { colors } = useTheme()
-
-  const handleColor = colors[color ?? 'primary']
+  const handleColor = color ?? colors.primary
 
   const handleButtonVariation = (
     variationType: TButtonVariation | undefined,
@@ -45,28 +44,36 @@ const MoleculeButton = ({
         }
       case 'plain':
       default:
-        return {}
+        return {
+          paddingHorizontal: 0,
+          paddingVertical: 0,
+        }
     }
   }
 
   const handleSize = (sizeType: TButtonSize | undefined) => {
-    switch (sizeType) {
-      case 'sm':
-        return {
-          paddingHorizontal: 18,
-          paddingVertical: 6,
-        }
-      case 'lg':
-        return {
-          paddingHorizontal: 34,
-          paddingVertical: 12,
-        }
-      default:
-      case 'md':
-        return {
-          paddingHorizontal: 24,
-          paddingVertical: 10,
-        }
+    if (variation !== 'plain') {
+      switch (sizeType) {
+        case 'sm':
+          return {
+            paddingHorizontal: 18,
+            paddingVertical: 6,
+            marginVertical: 4,
+          }
+        case 'lg':
+          return {
+            paddingHorizontal: 34,
+            paddingVertical: 12,
+            marginVertical: 4,
+          }
+        default:
+        case 'md':
+          return {
+            paddingHorizontal: 24,
+            paddingVertical: 10,
+            marginVertical: 4,
+          }
+      }
     }
   }
 
@@ -98,8 +105,6 @@ const style = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 4,
-    marginVertical: 4,
   },
 })
 

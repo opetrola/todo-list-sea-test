@@ -1,5 +1,5 @@
-import AtomModal from '@atoms/AtomModal.tsx'
-import AtomSpinner from '@atoms/AtomSpinner.tsx'
+import AtomModal from 'atoms/AtomModal.tsx'
+import AtomSpinner from 'atoms/AtomSpinner.tsx'
 
 interface IMoleculeModalLoading {
   isLoading: boolean

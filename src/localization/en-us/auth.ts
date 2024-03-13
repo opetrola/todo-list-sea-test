@@ -18,4 +18,5 @@ export default {
   return_to_login: 'Return to login page.',
   wrong_credentials_message: 'email and/or password are wrong',
   wrong_credentials_title: 'wrong credentials',
+  uid: 'uid',
 }

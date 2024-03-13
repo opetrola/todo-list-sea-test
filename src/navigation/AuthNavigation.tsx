@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 // Screens
-import AuthScreen from '@screens/auth/AuthScreen.tsx'
-import SignUpScreen from '@screens/auth/SignUpScreen.tsx'
-import EmailSignInScreen from '@screens/auth/EmailSignInScreen.tsx'
+import AuthScreen from 'screens/auth/AuthScreen.tsx'
+import SignUpScreen from 'screens/auth/SignUpScreen.tsx'
+import EmailSignInScreen from 'screens/auth/EmailSignInScreen.tsx'
 
 const Stack = createNativeStackNavigator()
 

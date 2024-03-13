@@ -2,11 +2,11 @@ import { useContext } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
-import MoleculeButton from '@molecules/MoleculeButton.tsx'
-import AtomLabel from '@atoms/AtomLabel.tsx'
+import MoleculeButton from 'molecules/MoleculeButton.tsx'
+import AtomLabel from 'atoms/AtomLabel.tsx'
 
-import { SignUpContext } from '@contexts/SignUpContext.tsx'
-import { onSignUp } from '@firebase_service/auth.ts'
+import { SignUpContext } from 'contexts/SignUpContext.tsx'
+import { onSignUp } from 'firebase_service/auth.ts'
 
 const OrganismSignUpButtonContainer = ({ navigate }: InavigateContainer) => {
   const { t } = useTranslation('auth')

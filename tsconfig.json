@@ -9,43 +9,43 @@
       "*": [
         "src/*"
       ],
-      "@src/*": [
+      "src/*": [
         "src/*"
       ],
-      "@atoms/*": [
+      "atoms/*": [
         "src/components/atoms/*"
       ],
-      "@molecules/*": [
+      "molecules/*": [
         "src/components/molecules/*"
       ],
-      "@organisms/*": [
+      "organisms/*": [
         "src/components/organisms/*"
       ],
-      "@screens/*": [
+      "screens/*": [
         "src/screens/*"
       ],
-      "@templates/*": [
+      "templates/*": [
         "src/templates/*"
       ],
-      "@contexts/*": [
+      "contexts/*": [
         "src/contexts/*"
       ],
-      "@utils/*": [
+      "utils/*": [
         "src/utils/*"
       ],
-      "@assets/*": [
+      "assets/*": [
         "assets/*"
       ],
-      "@images/*": [
+      "images/*": [
         "assets/images/*"
       ],
-      "@navigation/*": [
+      "navigation/*": [
         "src/navigation/*"
       ],
-      "@firebase_service/*": [
+      "firebase_service/*": [
         "src/firebase/*"
       ],
-      "@localization/*": [
+      "localization/*": [
         "src/localization/*"
       ]
     },

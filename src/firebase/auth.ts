@@ -37,7 +37,7 @@ export const onSignUp = (
     .catch(error => handleError(error.code))
 }
 
-export const checkOnLogged = (
+export const OnCheckLogged = (
   callback: (user: IUserData) => void,
   handleError: (error: string) => void,
 ) => {

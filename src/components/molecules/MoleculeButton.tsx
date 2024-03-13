@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native'
-import AtomLabel from '@atoms/AtomLabel.tsx'
-import { ButtonSize } from '@utils/sizeUtils.tsx'
+import AtomLabel from 'atoms/AtomLabel.tsx'
+import { ButtonSize } from 'utils/sizeUtils.tsx'
 import { useTheme } from '@react-navigation/native'
 
 interface IMoleculeButton {

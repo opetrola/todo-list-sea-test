@@ -1,32 +1,42 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
-import AtomAuthBackgroundImage from '@atoms/AtomAuthBackgroundImage.tsx'
-import OrganismSocialMediaButtons from '@organisms/auth/OrganismSocialMediaButtons.tsx'
-import OrganismAuthContainer from '@organisms/auth/OrganismAuthContainer.tsx'
-import MoleculeModalLoading from '@molecules/MoleculeModalLoading.tsx'
+import AtomAuthBackgroundImage from 'atoms/AtomAuthBackgroundImage.tsx'
+import OrganismSocialMediaButtons from 'organisms/auth/OrganismSocialMediaButtons.tsx'
+import OrganismAuthContainer from 'organisms/auth/OrganismAuthContainer.tsx'
+import MoleculeModalLoading from 'molecules/MoleculeModalLoading.tsx'
 
-import { checkOnLogged } from '@firebase_service/auth.ts'
+import { OnCheckLogged } from 'firebase_service/auth.ts'
+import { CommonContext } from 'contexts/CommonContext.tsx'
 
 const AuthScreen = ({ navigation }: INavigationScreen) => {
   const { colors } = useTheme()
-  const [loading, setLoading] = useState(true)
+  const { loading, setLoading } = useContext(CommonContext)
 
-  useEffect(() => {
-    checkOnLogged(
+  const checkLogged = () => {
+    setLoading(true)
+
+    OnCheckLogged(
       user => {
         if (!user.error) {
-          console.log(user)
           setLoading(false)
           navigation.navigate('Home', { user })
         } else {
           setLoading(false)
         }
       },
-      () => {},
+      () => {
+        setLoading(false)
+      },
     )
-  }, [loading, navigation])
+  }
+
+  useEffect(() => {
+    checkLogged()
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>

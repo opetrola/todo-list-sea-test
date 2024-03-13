@@ -1,8 +1,8 @@
 import { Dimensions, StyleSheet, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 
-import AtomLabel from '@atoms/AtomLabel.tsx'
-import MoleculeButton from '@molecules/MoleculeButton.tsx'
+import AtomLabel from 'atoms/AtomLabel.tsx'
+import MoleculeButton from 'molecules/MoleculeButton.tsx'
 
 const OrganismAuthContainer = ({ navigate }: InavigateContainer) => {
   const { t } = useTranslation('auth')

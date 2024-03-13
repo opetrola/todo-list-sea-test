@@ -18,4 +18,5 @@ export default {
   return_to_login: 'Voltar à tela de login.',
   wrong_credentials_message: 'Email e(ou) senha errados',
   wrong_credentials_title: 'credenciais inválidas',
+  uid: 'uid',
 }

@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { handleSizes } from '@utils/sizeUtils.tsx'
+import { handleSizes } from 'utils/sizeUtils.tsx'
 import { useTheme } from '@react-navigation/native'
 
 interface IAtomIconButton {

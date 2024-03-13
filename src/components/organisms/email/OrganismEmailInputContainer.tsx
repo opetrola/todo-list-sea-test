@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import MoleculeTextInput from '@molecules/MoleculeTextInput.tsx'
-import { SignInContext } from '@contexts/SignInContext.tsx'
+import MoleculeTextInput from 'molecules/MoleculeTextInput.tsx'
+import { SignInContext } from 'contexts/SignInContext.tsx'
 
 const OrganismEmailInputContainer = () => {
   const { t } = useTranslation('auth')

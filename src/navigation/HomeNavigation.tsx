@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Icons from 'react-native-vector-icons/MaterialIcons'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 // Screens
-import TodosScreens from '@screens/home/TodosScreens.tsx'
-import ScheduleScreen from '@screens/home/ScheduleScreen.tsx'
-import SettingsScreen from '@screens/home/SettingsScreen.tsx'
-import ProfileScreen from '@screens/home/ProfileScreen.tsx'
+import TodosScreens from 'screens/home/TodosScreens.tsx'
+import ScheduleScreen from 'screens/home/ScheduleScreen.tsx'
+import ProfileScreen from 'screens/home/ProfileScreen.tsx'
+import { UserContext } from 'contexts/UserContext.tsx'
 
 const Tab = createBottomTabNavigator()
 
@@ -22,19 +22,23 @@ const tabOptions = (title: string, iconName: string, color: string) => {
   }
 }
 
-const HomeNavigation = () => {
+const HomeNavigation = ({ route }: INavigationScreen) => {
   const { t } = useTranslation('navigation')
   const { colors } = useTheme()
+  const { username: name, error, uid, email } = route.params.user
 
-  const ScreenOptions = {
-    tabBarStyle: {
-      paddingTop: 8,
-      height: 90,
-    },
-  }
+  const { setUsername, setEmail, setUid, setError, username } =
+    useContext(UserContext)
+
+  useEffect(() => {
+    setUsername(name)
+    setError(error)
+    setUid(uid)
+    setEmail(email)
+  }, [email, error, name, setEmail, setError, setUid, setUsername, uid])
 
   return (
-    <Tab.Navigator screenOptions={ScreenOptions}>
+    <Tab.Navigator>
       <Tab.Screen
         name={'Todo'}
         component={TodosScreens}
@@ -50,17 +54,12 @@ const HomeNavigation = () => {
       />
 
       <Tab.Screen
-        name={'Settings'}
-        component={SettingsScreen}
-        options={() => tabOptions(t('settings'), 'settings', colors.primary)}
-      />
-
-      <Tab.Screen
         name={'Profile'}
         component={ProfileScreen}
-        options={() =>
-          tabOptions(t('profile'), 'supervised-user-circle', colors.primary)
-        }
+        options={{
+          ...tabOptions(t('profile'), 'supervised-user-circle', colors.primary),
+          headerShown: true,
+        }}
       />
     </Tab.Navigator>
   )

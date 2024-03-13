@@ -8,7 +8,7 @@ const AtomAuthBackgroundImage = () => {
   return (
     <View style={[style.container, { backgroundColor: colors.card }]}>
       <SvgUri
-        source={require('@images/auth_background_image.svg')}
+        source={require('images/auth_background_image.svg')}
         height={'100%'}
       />
     </View>

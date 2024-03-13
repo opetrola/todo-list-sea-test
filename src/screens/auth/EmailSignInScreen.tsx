@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
-import OrganismEmailInputContainer from '@organisms/email/OrganismEmailInputContainer.tsx'
-import OrganismEmailButtonContainer from '@organisms/email/OrganismEmailButtonContainer.tsx'
+import OrganismEmailInputContainer from 'organisms/email/OrganismEmailInputContainer.tsx'
+import OrganismEmailButtonContainer from 'organisms/email/OrganismEmailButtonContainer.tsx'
 
 const EmailSignInScreen = ({ navigation }: INavigationScreen) => {
   const { colors } = useTheme()

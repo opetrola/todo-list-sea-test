@@ -1,5 +1,5 @@
 import { Text, TextStyle } from 'react-native'
-import { handleSizes } from '@utils/sizeUtils.tsx'
+import { handleSizes } from 'utils/sizeUtils.tsx'
 import { useTheme } from '@react-navigation/native'
 
 interface IAtomLabel {

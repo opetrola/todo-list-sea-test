@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
-import OrganismSignUpInputContainer from '@organisms/signUp/OrganismSignUpInputContainer.tsx'
-import OrganismSignUpButtonContainer from '@organisms/signUp/OrganismSignUpButtonContainer.tsx'
+import OrganismSignUpInputContainer from 'organisms/signUp/OrganismSignUpInputContainer.tsx'
+import OrganismSignUpButtonContainer from 'organisms/signUp/OrganismSignUpButtonContainer.tsx'
 
 const SignUpScreen = ({ navigation }: INavigationScreen) => {
   const { colors } = useTheme()
